@@ -1,3 +1,9 @@
 {
-  "http": {}
+  "cuks": {
+    "http": {
+      "middleware": {
+        "helmet": {}
+      }
+    }
+  }
 }
