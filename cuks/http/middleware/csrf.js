@@ -7,7 +7,7 @@ module.exports = function(cuk) {
 
   return {
     handler: function(options) {
-      return new CSRF(helper.makeOptions('security', 'cuks.http.middleware.cors', options))
+      return new CSRF(helper('core:makeOptions')('security', 'cuks.http.middleware.cors', options))
     }
   }
 }

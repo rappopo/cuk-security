@@ -9,7 +9,7 @@ module.exports = function(cuk) {
     global: true,
     level: 2,
     handler: function(options) {
-      return helmet(helper.makeOptions('security', 'cuks.http.middleware.helmet', options))
+      return helmet(helper('core:makeOptions')('security', 'cuks.http.middleware.helmet', options))
     }
   }
 }
