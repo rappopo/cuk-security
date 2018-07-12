@@ -3,7 +3,7 @@
 const helmet = require('koa-helmet')
 
 module.exports = function(cuk) {
-  const { _, helper } = cuk.lib
+  const { _, helper } = cuk.pkg.core.lib
 
   return {
     global: true,

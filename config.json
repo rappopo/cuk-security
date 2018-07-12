@@ -2,7 +2,28 @@
   "cuks": {
     "http": {
       "middleware": {
-        "helmet": {}
+        "csrf": {
+          "invalidSessionSecretMessage": "Invalid session secret",
+          "invalidSessionSecretStatusCode": 403,
+          "invalidTokenMessage": "Invalid CSRF token",
+          "invalidTokenStatusCode": 403,
+          "excludedMethods": ["GET", "HEAD", "OPTIONS"],
+          "disableQuery": false
+        },
+        "helmet": {
+          "contentSecurityPolicy": false,
+          "expectCt": false,
+          "dnsPrefetchControl": true,
+          "frameguard": true,
+          "hidePoweredBy": true,
+          "hpkp": false,
+          "hsts": false,
+          "ieNoOpen": true,
+          "noCache": false,
+          "noSniff": true,
+          "referrerPolicy": false,
+          "xssFilter": true
+        }
       }
     }
   }

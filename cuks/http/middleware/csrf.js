@@ -3,7 +3,7 @@
 const CSRF = require('koa-csrf')
 
 module.exports = function(cuk) {
-  const { _, helper } = cuk.lib
+  const { _, helper } = cuk.pkg.core.lib
 
   return {
     handler: function(options) {
